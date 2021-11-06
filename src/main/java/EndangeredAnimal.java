@@ -1,4 +1,4 @@
-public class EndangeredAnimal {
-    public EndangeredAnimal() {
+public class EndangeredAnimal extends Animal {
+    public EndangeredAnimal(String name) {
     }
 }

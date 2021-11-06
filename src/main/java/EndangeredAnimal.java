@@ -1,4 +1,4 @@
-public class EndangeredAnimal extends Animal implements EndangeredInterface{
+public class EndangeredAnimal extends Animal implements EndangeredAnInterface{
     private String health;
     private String age;
 

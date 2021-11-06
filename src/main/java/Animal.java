@@ -35,7 +35,7 @@ public class Animal {
         return getType().equals(animal.getType());
     }
 
-    // database setup
+//    // database setup
 //    @Override
 //    public void save(){
 //        try(Connection con = DB.sql2o.open()){

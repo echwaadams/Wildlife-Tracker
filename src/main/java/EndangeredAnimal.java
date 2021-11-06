@@ -3,23 +3,28 @@ import interfaces.EndangeredInterface;
 
 import java.util.List;
 import java.util.Objects;
-public class EndangeredAnimal extends Animal implements EndangeredAnInterface{
+
+public class EndangeredAnimal extends Animal implements EndangeredInterface{
     private String health;
     private String age;
 
-    public static final String ANIMALS_TYPE = "endangered";
+
+    public static final String ANIMAL_TYPE = "endangered";
     public static final String ADULT = "adult";
     public static final String YOUNG = "youthful";
     public static final String NEWBORN = "newborn";
     public static final String HEALTHY = "very healthy";
     public static final String AVERAGE = "averagely unhealthy";
     public static final String ILL = "very unhealthy";
-    public EndangeredAnimal(String name) {
+
+    public EndangeredAnimal(String name,String age, String health){
         super(name);
-        this.type = ANIMALS_TYPE;
+        this.type = ANIMAL_TYPE;
         this.health = health;
         this.age = age;
+
     }
+
     public String getAge() {
         return age;
     }
@@ -73,4 +78,3 @@ public class EndangeredAnimal extends Animal implements EndangeredAnInterface{
         }
     }
 }
-

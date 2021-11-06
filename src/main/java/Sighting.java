@@ -1,3 +1,4 @@
+import java.EndangeredAnimal;
 import org.sql2o.Connection;
 
 import java.sql.Timestamp;

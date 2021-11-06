@@ -1,9 +1,8 @@
+package interfaces;
 import java.util.List;
-public class AnimalInterface {
-    //save
+public interface AnimalInterface {
     void save();
     void update(String name);
 
-    // delete
     void delete();
 }

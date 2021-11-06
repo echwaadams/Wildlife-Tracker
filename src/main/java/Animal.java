@@ -3,9 +3,9 @@ import java.util.Objects;
 import org.sql2o.*;
 
 public class Animal {
-    private String name;
-    private int id;
-    private String type;
+    public String name;
+    public int id;
+    public String type;
     public static final String ANIMALS_TYPE = "animal";
     public Animal(String name) {
         this.name = name;

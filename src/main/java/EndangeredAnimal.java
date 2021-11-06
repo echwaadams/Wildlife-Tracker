@@ -1,8 +1,13 @@
+import org.sql2o.Connection;
+import interfaces.EndangeredInterface;
+
+import java.util.List;
+import java.util.Objects;
 public class EndangeredAnimal extends Animal implements EndangeredAnInterface{
     private String health;
     private String age;
 
-    public static final String ANIMAL_TYPE = "endangered";
+    public static final String ANIMALS_TYPE = "endangered";
     public static final String ADULT = "adult";
     public static final String YOUNG = "youthful";
     public static final String NEWBORN = "newborn";
@@ -11,7 +16,7 @@ public class EndangeredAnimal extends Animal implements EndangeredAnInterface{
     public static final String ILL = "very unhealthy";
     public EndangeredAnimal(String name) {
         super(name);
-        this.type = ANIMAL_TYPE;
+        this.type = ANIMALS_TYPE;
         this.health = health;
         this.age = age;
     }

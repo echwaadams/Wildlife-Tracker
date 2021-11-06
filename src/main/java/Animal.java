@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Objects;
 import org.sql2o.*;
 
@@ -45,6 +46,26 @@ public class Animal {
                             .addParameter("type",this.type)
                             .executeUpdate()
                             .getKey();
+        }
+    }
+    // returning all database entries
+    public static List<Animal> all(){
+        String sql = "SELECT * FROM animals WHERE type=:type";
+        try(Connection con = DB.sql2o.open()){
+            return con.createQuery(sql)
+                    .addParameter("type","animal")
+                    .throwOnMappingFailure(false)
+                    .executeAndFetch(Animal.class);
+        }
+    }
+    public static Animal findById(int id){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "SELECT * FROM animals WHERE id=:id AND type=:type";
+            return con.createQuery(sql)
+                    .addParameter("id",id)
+                    .addParameter("type","animal")
+                    .throwOnMappingFailure(false)
+                    .executeAndFetchFirst(Animal.class);
         }
     }
 }

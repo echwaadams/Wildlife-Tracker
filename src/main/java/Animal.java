@@ -58,12 +58,12 @@ public class Animal {
                     .executeAndFetch(Animal.class);
         }
     }
-    public static Animal findById(int id){
-        try(Connection con = DB.sql2o.open()){
+    public static Animal findById(int id) {
+        try (Connection con = DB.sql2o.open()) {
             String sql = "SELECT * FROM animals WHERE id=:id AND type=:type";
             return con.createQuery(sql)
-                    .addParameter("id",id)
-                    .addParameter("type","animal")
+                    .addParameter("id", id)
+                    .addParameter("type", "animal")
                     .throwOnMappingFailure(false)
                     .executeAndFetchFirst(Animal.class);
         }

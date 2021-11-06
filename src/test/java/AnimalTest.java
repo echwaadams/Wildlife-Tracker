@@ -6,10 +6,10 @@ import org.sql2o.Sql2o;
 import static org.junit.Assert.*;
 
 public class AnimalTest {
-//
-//    @Rule
-//    public DatabaseRule database = new DatabaseRule();
-//
+
+    @Rule
+    public DatabaseRule database = new DatabaseRule();
+
     @Test
     public void instantiatesCorrectly_true(){
         Animal testAnimal = new Animal("wolf");
@@ -40,6 +40,16 @@ public class AnimalTest {
         Animal testAnimal = new Animal("wolf");
         testAnimal.save();
         assertTrue(Animal.all().get(0).equals(testAnimal));
+    }
+    //returns all database entries
+    @Test
+    public void all_returnsAllInstancesOfAnimals_true(){
+        Animal firstAnimal = new Animal("wolf");
+        firstAnimal.save();
+        Animal secondAnimal = new Animal("tiger");
+        secondAnimal.save();
+        assertEquals(Animal.all().get(0),firstAnimal);
+        assertEquals(Animal.all().get(1),secondAnimal);
     }
 
 }

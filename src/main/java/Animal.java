@@ -35,16 +35,16 @@ public class Animal {
         return getType().equals(animal.getType());
     }
 
-//    // database setup
-//    @Override
-//    public void save(){
-//        try(Connection con = DB.sql2o.open()){
-//            String sql = "INSERT INTO animals(name,type) VALUES(:name,:type)";
-//                    this.id = (int) con.createQuery(sql, true)
-//                            .addParameter("name",this.name)
-//                            .addParameter("type",this.type)
-//                            .executeUpdate()
-//                            .getKey();
-//        }
-//    }
+    // saving data into the database
+    //@Override
+    public void save(){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "INSERT INTO animals(name,type) VALUES(:name,:type)";
+                    this.id = (int) con.createQuery(sql, true)
+                            .addParameter("name",this.name)
+                            .addParameter("type",this.type)
+                            .executeUpdate()
+                            .getKey();
+        }
+    }
 }

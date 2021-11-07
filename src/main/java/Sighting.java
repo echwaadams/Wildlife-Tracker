@@ -1,4 +1,5 @@
-import java.EndangeredAnimal;
+
+import interfaces.SightingInterface;
 import org.sql2o.Connection;
 
 import java.sql.Timestamp;
@@ -64,7 +65,7 @@ public class Sighting implements SightingInterface {
                     .executeAndFetchFirst(String.class);
         }
     }
-    @Override
+
     public void save(){
         try(Connection con = DB.sql2o.open()){
             String sql = "INSERT INTO sightings (animalId, rangerId, locationId, date, animalType) VALUES (:animalId," +
@@ -127,7 +128,7 @@ public class Sighting implements SightingInterface {
         }
     }
 
-    @Override
+
     public void delete() {
         try (Connection con = DB.sql2o.open()) {
             String sql = "DELETE FROM sightings WHERE id = :id;";

@@ -68,4 +68,23 @@ public class Animal {
                     .executeAndFetchFirst(Animal.class);
         }
     }
+
+    public void update(String name) {
+        String sql = "UPDATE animals SET name=:name WHERE id=:id";
+        try (Connection conn = DB.sql2o.open()){
+            conn.createQuery(sql)
+                    .addParameter("name",name)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }
+    }
+
+    public void delete() {
+        try (Connection conn = DB.sql2o.open()){
+            String sql = "DELETE FROM animals WHERE id=:id;";
+            conn.createQuery(sql)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }
+    }
 }

@@ -10,7 +10,7 @@ public class LocationTest {
 
     @Before
     public void setUp() throws Exception {
-        DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker_test","calvo-linus","Somoca1421@.");
+        DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker_test");
     }
 
     @After

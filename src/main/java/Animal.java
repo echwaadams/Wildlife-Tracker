@@ -1,8 +1,11 @@
 import java.util.List;
 import java.util.Objects;
+
+import interfaces.AnimalInterface;
+import org.sql2o.Connection;
 import org.sql2o.*;
 
-public class Animal {
+public class Animal implements AnimalInterface {
     public String name;
     public int id;
     public String type;

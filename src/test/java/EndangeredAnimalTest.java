@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class EndangeredAnimalTest {
     @Before
     public void setUp() throws Exception {
-        DB.sql2o =  new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker", null, null);
+        DB.sql2o =  new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker");
     }
 
     @After

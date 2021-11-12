@@ -27,13 +27,13 @@ body
 }
 .h-1,#btn-1,#ed-1
 {
-    color: #fff;
+    color: #000;
     font-family: 'Fredericka the Great', cursive;
 }
 .btn-1
 {
     margin-top: 15%;
-    color: #fff;
+    color: #000;
     font-family: 'Fredericka the Great', cursive;
 }
 @keyframes slideInFromLeft
@@ -66,12 +66,12 @@ body
         text-decoration: none;
         display: inline-block;
         margin-right: 10px;
-        color:#fff;
+        color:#000;
     }
     button
     {
       position: relative;
-      color: white;
+      color: green;
       background-color: black;
       border: none;
       padding: 10px 30px;
@@ -112,7 +112,7 @@ body
     }
     #h1-1
     {
-    color:#fff;
+    color:#000;
     font-family: 'Rye', cursive;
     }
     #babayao ,#hero-bak

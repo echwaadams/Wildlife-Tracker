@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class EndangeredAnimal extends Animal implements EndangeredInterface{
-    private String health;
-    private String age;
+    private final String health;
+    private final String age;
 
 
     public static final String ANIMAL_TYPE = "endangered";
